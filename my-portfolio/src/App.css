@@ -1,0 +1,160 @@
+/* ------------------- Global Styles ------------------- */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* ------------------- Logo ------------------- */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: block;
+  margin: 0 auto; /* Center alignment */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ------------------- Cards ------------------- */
+.card {
+  padding: 2em;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ------------------- Buttons ------------------- */
+button {
+  transition: all 0.25s ease;
+}
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ------------------- Inputs ------------------- */
+input, select {
+  transition: all 0.25s ease;
+}
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* Blue focus */
+  border-color: #3b82f6;
+  transform: scale(1.01);
+}
+input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+.input-error {
+  border-color: #f87171;
+  background-color: #fef2f2;
+}
+
+/* ------------------- Status Badges ------------------- */
+.status-badge {
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-badge.on-time {
+  background: linear-gradient(to right, #10b981, #34d399);
+  color: #ffffff;
+}
+.status-badge.delayed {
+  background: linear-gradient(to right, #facc15, #fbbf24);
+  color: #1f2937;
+}
+.status-badge.stalled {
+  background: linear-gradient(to right, #ef4444, #f87171);
+  color: #ffffff;
+}
+
+/* ------------------- Modals ------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  z-index: 50;
+}
+.modal-content {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+.modal-overlay.show .modal-content {
+  transform: translateY(0);
+}
+
+/* ------------------- Loading Spinner ------------------- */
+.spinner {
+  border-radius: 50%;
+  border: 4px solid #bfdbfe;
+  border-top: 4px solid #3b82f6;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ------------------- Misc ------------------- */
+.read-the-docs {
+  color: #888;
+}
+
+/* ------------------- Responsive Improvements ------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 { font-size: 2.25rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  button { min-height: 44px; min-width: 44px; }
+}

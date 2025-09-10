@@ -1,0 +1,16 @@
+{
+  "name": "Janta Dashboard - Government Project Tracker",
+  "short_name": "Janta Dashboard",
+  "description": "Track government projects in your area with complete transparency",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
